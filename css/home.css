@@ -1,0 +1,226 @@
+:root {
+    --shadowColor: rgba(0,0,0,0.2);
+}
+
+body {
+    /* height: 200vh; */
+}
+
+header {
+    position: sticky; /* catches the top part of the window and sticks/moves with the scroll */
+    top:0;
+}
+header nav {
+    position: relative; /* relative position allows me to move the box model 12% from the left(from its previous position) */
+    left: 12%;
+    background-color: white;
+    /* border-left: 2px solid black; */
+    width: calc(100% - 12%);
+    height: 90px;
+    z-index: 0;
+    box-shadow: 0px 1px 2px 1px var(--shadowColor);
+}
+
+header nav ul {
+    display: inline-flex; /* aligns content side-by-side hence inline */
+    background-color: transparent;
+    float: right;
+    list-style: none;
+}
+header nav ul li {
+    margin-right: 10px;
+}
+header nav ul li a {
+    border: 1px solid red;
+    display: flex; /* the way to align content in a elements box-model - im using it to justify and align content to the center*/
+    height: 90px;
+    /* padding: 0 20px; */
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    transition: ease-in-out 0.1s background-color;
+}
+header nav ul li a:hover {
+    background-color: black;
+}
+
+#logo {
+    position: absolute; /* makes the element independent from other elements */
+    top: 0%;
+    left: 0%;
+    background-color: rgb(255, 255, 255);
+    background-image: url(../images/ingenium_logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80% 80%;
+    width: 12%;
+    height: auto;
+    aspect-ratio: 1;
+    float: left;
+    cursor: pointer;
+    border-bottom-right-radius: 20%;
+    box-shadow: 1px 1px 2px 1px var(--shadowColor);
+    z-index: 1;
+}
+
+main {
+    position: static;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+    /* border: 5px solid black; */
+}
+
+#products {
+    display: grid;
+    /* background-color: blue; */
+    width: 60%;
+    padding: 10px;
+    /* margin-left: 40%; */
+    grid-template-rows: 10% 30%;
+    grid-template-columns: auto;
+    aspect-ratio: 1;
+    grid-gap: 10px;
+}
+
+.product {
+    background-color: yellow;
+    border-radius: 1vw;
+}
+
+.product:nth-child(1){
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product:nth-child(1) h2{
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: monospace;
+}
+.product:nth-child(2) {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url(../images/h2feulcell.png);
+    background-size: 114%;
+    background-position: center;
+    cursor: pointer;
+    transition: ease-in-out 0.2s background-size;
+}
+.product:nth-child(3) {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url(../images/turbo.png);
+    background-size: 114%;
+    background-position: center;
+    cursor: pointer;
+    transition: ease-in-out 0.2s background-size;
+}
+.product:nth-child(4) {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url(../images/digital_heatsink.png);
+    background-size: 114%;
+    background-position: center;
+    cursor: pointer;
+    transition: ease-in-out 0.2s background-size;
+}
+.product:nth-child(2):hover {
+    background-size: 118%;
+}
+.product:nth-child(3):hover {
+    background-size: 118%;
+}
+.product:nth-child(4):hover {
+    background-size: 118%;
+}
+
+.trendingProduct {
+    /* border: 1px solid red; */
+    text-align: center;
+    font-family: monospace;
+    font-weight: 900;
+    font-size: 3rem;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.shopnowbtn {
+    /* border: 1px solid red; */
+    height: 30%;
+    display: flex;
+    justify-content: right;
+    padding: 20px 40px;
+    /* align-items: right; */
+}
+
+.shopnowbtn button {
+    cursor: pointer;
+    padding: 10px 20px;
+    /* font-size: 0.9rem; */
+    background: rgba(255,255,255,0.8);
+    border: 1px solid white;
+    transition: ease-in-out 0.1s transform;
+}
+.shopnowbtn button:hover {
+    transform: scale(110%);
+    background: rgba(255,255,255,1);
+}
+
+footer {
+    background-color: #202020;
+    padding: 40px;
+    font-size: 1rem;
+    margin-top: 100px;
+}
+footer h4 {
+    color: white;
+}
+
+#categories {
+    /* border: 1px solid red; */
+    background-color: white;
+    width: 40%;
+    height: 100%;
+    aspect-ratio: 1;
+    padding: 20px;
+}
+
+#categories div {
+    padding: 20px;
+    box-shadow: 1px 1px 2px 0px #202020;
+    border-radius: 0.3rem;
+    height: 100%;
+}
+#categories div h2 {
+    text-align: center;
+    font-size: 2.4rem;
+    margin: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#categories div ul li {
+    cursor: pointer;
+    list-style: none;
+    padding: 6px;
+    background-color: rgb(0,0,0,0.4);
+    border: 1px solid #202020;
+}
+
+@media only screen and (max-width: 620px){
+    #logo {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-radius: none !important;
+        aspect-ratio: none;
+        /* display: none; */
+    }
+    header nav {
+        /* display: none; */
+        position: relative;
+        background: red;
+    }
+}
