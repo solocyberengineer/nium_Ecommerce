@@ -5,7 +5,8 @@
     box-sizing: border-box;
 }
 body {
-    background: #505050;
+    /* background: #505050; */
+    background-color: white;
 }
 :root {
     --shadowColor: rgba(0,0,0,0.2);
