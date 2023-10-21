@@ -47,7 +47,6 @@
 }
 #searchBar div input:nth-child(2):hover {
     background-color: rgba(0, 195, 255, 0.9);
-
 }
 
 main div {
@@ -101,5 +100,23 @@ main div h2 {
 .details {
     background-color: white;
     width: 50%;
+}
+
+@media only screen and (max-width: 900px){
+    .products {
+        width: 100%;
+        /* background-color: red; */
+        display: grid;
+        grid-template-columns: repeat(1, calc(100%));
+        grid-template-rows: repeat(3, 300px);
+        /* overflow: hidden; */
+        margin-top: 0px;
+        /* margin: 60px 20px; */
+    }
+    #searchBar div {
+        width: 100%;
+        /* background-color: yellow; */
+        border-radius: 0;
+    }
 }
 
