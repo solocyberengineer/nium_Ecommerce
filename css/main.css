@@ -114,7 +114,8 @@ header nav ul li a:hover {
         height: 90px;
         width: 100%;
         font-size: 2rem;
-        font-family: 'Courier New', Courier, monospace;
+        /* font-family: 'Courier New', Courier, monospace; */
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-weight: 400;
     }
     footer {
