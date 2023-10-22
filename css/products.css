@@ -163,7 +163,7 @@ main div h2 {
         width: 100%;
         /* background-color: red; */
         display: grid;
-        grid-template-columns: repeat(2, calc(100%/2));
+        grid-template-columns: repeat(1, calc(100%/2));
         grid-template-rows: repeat(3, 300px);
         /* overflow: hidden; */
         margin-top: 0px;
